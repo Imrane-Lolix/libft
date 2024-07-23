@@ -5,7 +5,7 @@
 • memmove
 • memchr
 • memcmp
-• strlen
+• strlen - done!
 • strdup
 • strcpy
 • strncpy
