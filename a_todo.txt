@@ -6,9 +6,9 @@
 • memchr
 • memcmp
 • strlen - done!
-• strdup
-• strcpy
-• strncpy
+• strdup - done!
+• strcpy - done!
+• strncpy - done!
 • strcat
 • strncat
 • strlcat
