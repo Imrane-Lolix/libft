@@ -2,7 +2,7 @@
 • bzero - done!
 • memcpy - done!
 • memccpy - done!
-• memmove
+• memmove - done!
 • memchr
 • memcmp
 • strlen - done!
