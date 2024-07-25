@@ -18,7 +18,7 @@
 • strnstr - done!
 • strcmp - done!
 • strncmp - done!
-• atoi
+• atoi - done!
 • isalpha
 • isdigit
 • isalnum
