@@ -12,7 +12,7 @@
 • strcat - done!
 • strncat - done!
 • strlcat - done!
-• strchr
+• strchr - done!
 • strrchr
 • strstr
 • strnstr
