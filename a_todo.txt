@@ -9,8 +9,8 @@
 • strdup - done!
 • strcpy - done!
 • strncpy - done!
-• strcat
-• strncat
+• strcat - done!
+• strncat - done!
 • strlcat
 • strchr
 • strrchr
