@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include "libft.h"
-#include "ft_strrchr.c"
-#include "ft_strlen.c"
+#include "ft_strncmp.c"
 
 int main() {
-    const char	*src = "aaaba";
-    //char		dst[5] = "aaa";
+    const char	*src = "aaabaa";
+    const char	*dst = "aaacaa";
 	
-	printf("ptr    = %p\n", ft_strrchr(src, 'b'));
-    printf("ptr    = %p\n", strrchr(src, 'b'));
+	printf("ptr    = %d\n", ft_strncmp(dst, src, 4));
+    printf("ptr    = %d\n", strncmp(dst, src, 4));
 	return 0;
 }

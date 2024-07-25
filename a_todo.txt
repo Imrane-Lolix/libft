@@ -13,10 +13,10 @@
 • strncat - done!
 • strlcat - done!
 • strchr - done!
-• strrchr
+• strrchr - done!
 • strstr
 • strnstr
-• strcmp
+• strcmp - done!
 • strncmp
 • atoi
 • isalpha
