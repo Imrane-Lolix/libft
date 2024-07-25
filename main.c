@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include "libft.h"
 #include "ft_strlen.c"
-#include "ft_strncat.c"
+#include "ft_strlcat.c"
 
 int main() {
-    const char	src[20] = "My name is Imrane\0";
-    char		dst[40] = "Hello, ";
-	ft_strncat(dst, src, 5);
-	printf("res = %s\n", dst);
-    return 0;
+    const char	src[5] = "bbbbb";
+    char		dst[5] = "aaa";
+	
+	size_t s = ft_strlcat(dst, src, 5);
+	printf("dst res = %s\n", dst);
+    printf("size    = %ld\n", s);
+	return 0;
 }
