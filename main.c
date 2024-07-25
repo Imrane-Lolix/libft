@@ -1,14 +1,11 @@
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
-#include "libft.h"
-#include "ft_memset.c"
-#include "ft_bzero.c"
+#include "ft_memccpy.c"
 
 int main() {
-    char n[10] = "aaaaaaaaaa";
-	ft_bzero(n, 10);
-	printf("ptr    = %s\n", n);
-    //printf("ptr    = %s\n", (char *)memset((void *)n, 65, 10));
+	char dst[5] = "zzzzz";
+	const char *src = "abcd";
+
+	printf("res = %s\n", (char *)ft_memccpy(dst, src, 'c', 5));
 	return 0;
 }

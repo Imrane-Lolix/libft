@@ -1,7 +1,7 @@
 • memset - done!
 • bzero - done!
-• memcpy
-• memccpy
+• memcpy - done!
+• memccpy - done!
 • memmove
 • memchr
 • memcmp
