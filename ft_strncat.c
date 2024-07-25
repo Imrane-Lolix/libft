@@ -2,8 +2,8 @@
 
 char	*ft_strncat(char *dst, const char *src, size_t n)
 {
-	size_t dst_len;
-	size_t src_len;
+	size_t	dst_len;
+	size_t	src_len;
 
 	dst_len = ft_strlen(dst);
 	src_len = 0;
