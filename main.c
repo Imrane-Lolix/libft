@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include "libft.h"
-#include "ft_strlen.c"
-#include "ft_strlcat.c"
+#include "ft_strchr.c"
 
 int main() {
-    const char	src[5] = "bbbbb";
-    char		dst[5] = "aaa";
+    const char	*src = 0;
+    //char		dst[5] = "aaa";
 	
-	size_t s = ft_strlcat(dst, src, 5);
-	printf("dst res = %s\n", dst);
-    printf("size    = %ld\n", s);
+	printf("ptr    = %p\n", ft_strchr(src, 'b'));
+    //printf("ptr    = %p\n", strchr(src, 'b'));
 	return 0;
 }

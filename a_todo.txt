@@ -11,7 +11,7 @@
 • strncpy - done!
 • strcat - done!
 • strncat - done!
-• strlcat
+• strlcat - done!
 • strchr
 • strrchr
 • strstr
