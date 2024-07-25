@@ -4,7 +4,7 @@
 • memccpy - done!
 • memmove - done!
 • memchr - done!
-• memcmp
+• memcmp - done!
 • strlen - done!
 • strdup - done!
 • strcpy - done!

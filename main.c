@@ -4,12 +4,13 @@
 #include "ft_memcpy.c"
 #include "ft_strlen.c"
 #include "ft_memchr.c"
+#include "ft_memcmp.c"
 
 int main() {
-	const char dst[5] = "zzzzz";
-	//const char *src = "abcd";
+	const char dst[5] = "abcde";
+	const char src[5] = "abcde";
 
-	printf("res = %p\n", (char *)ft_memchr((void *)dst, 'z', 5));
-	printf("res = %p\n", (char *)memchr(dst, 'z', 5));
+	printf("res = %d\n", ft_memcmp(dst, src, 5));
+	printf("res = %d\n", memcmp(dst, src, 5));
 	return 0;
 }
