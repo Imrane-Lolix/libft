@@ -12,6 +12,7 @@ char	*ft_strchr(const char *s);
 char	*ft_strdup(const char *s);
 char	*ft_strrchr(const char *s);
 char	*ft_strstr(const char *haystack, const char *needle);
+char	*ft_strnstr(const char *big, const char *small, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 int		ft_strcmp(const char *s1, const char *s2);

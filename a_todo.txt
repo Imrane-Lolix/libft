@@ -15,7 +15,7 @@
 • strchr - done!
 • strrchr - done!
 • strstr - done!
-• strnstr
+• strnstr - done!
 • strcmp - done!
 • strncmp - done!
 • atoi
