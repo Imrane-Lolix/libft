@@ -3,7 +3,7 @@
 • memcpy - done!
 • memccpy - done!
 • memmove - done!
-• memchr
+• memchr - done!
 • memcmp
 • strlen - done!
 • strdup - done!
