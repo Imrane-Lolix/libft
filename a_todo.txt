@@ -1,5 +1,5 @@
-• memset
-• bzero
+• memset - done!
+• bzero - done!
 • memcpy
 • memccpy
 • memmove
@@ -19,10 +19,10 @@
 • strcmp - done!
 • strncmp - done!
 • atoi - done!
-• isalpha
-• isdigit
-• isalnum
-• isascii
-• isprint
+• isalpha - done!
+• isdigit - done!
+• isalnum - done!
+• isascii - done!
+• isprint - done!
 • toupper - done!
 • tolower - done!
