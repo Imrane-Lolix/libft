@@ -14,10 +14,10 @@
 • strlcat - done!
 • strchr - done!
 • strrchr - done!
-• strstr
+• strstr - done!
 • strnstr
 • strcmp - done!
-• strncmp
+• strncmp - done!
 • atoi
 • isalpha
 • isdigit
