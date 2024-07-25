@@ -21,5 +21,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 // -- Conversion functions
 int		ft_atoi(const char *nptr);
+int		ft_toupper(int c);
 
 #endif
