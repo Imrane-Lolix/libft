@@ -3,6 +3,7 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 // -- str functions
 char	*ft_strcpy(char *dst, const char *src);
