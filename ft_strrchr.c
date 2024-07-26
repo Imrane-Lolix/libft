@@ -4,10 +4,11 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 
-	i = ft_strlen(s) - 1;
-	while (s[i])
+	i = ft_strlen(s);
+
+	while (i + 1 > 0)
 	{
-		if (c == s[i])
+		if (s[i] == (char)c) 
 			return ((char *)&s[i]);
 		i--;
 	}
