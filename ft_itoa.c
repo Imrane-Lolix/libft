@@ -1,19 +1,19 @@
 #include "libft.h"
 
-static int count_digits(long int n)
+static int	count_digits(long int n)
 {
 	if (n < 0)
 		n = -n;
 	if (n == 0 || n < 10)
-		return 1;
+		return (1);
 	return (1 + count_digits(n / 10));
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *a;
-	long int nbr;
-	int len;
+	char		*a;
+	long int	nbr;
+	int			len;
 
 	len = count_digits(n);
 	if (n < 0)
@@ -24,7 +24,8 @@ char *ft_itoa(int n)
 	}
 	else
 		nbr = (long int)n;
-	if (!(a = ft_strnew(len)))
+	a = ft_strnew(len);
+	if (!a)
 		return (NULL);
 	if (n < 0)
 		a[0] = '-';

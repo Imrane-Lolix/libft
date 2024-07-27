@@ -2,7 +2,7 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *ptr;
+	void	*ptr;
 
 	if (size == 0)
 		return (NULL);

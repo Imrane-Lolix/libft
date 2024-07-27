@@ -2,71 +2,66 @@
 
 static int	count_words(char const *s, char c)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
-
 	while (s[i])
 	{
-		if (s[i] == c) 
+		if (s[i] == c)
 			i++;
-		else 
+		else
 		{
 			count++;
-			while (s[i] != c && s[i])
+			while (s[i] && s[i] != c)
 				i++;
 		}
 	}
 	return (count);
 }
 
-static void free_arr(char **arr, int size)
+static char	*get_word(char const *s, char c, int *i)
 {
-	int i;
+	int	start;
 
-	i = 0;
-	while (i < size)
-		free(arr[i++]);
+	while (s[*i] == c && s[*i])
+		(*i)++;
+	start = *i;
+	while (s[*i] != c && s[*i])
+		(*i)++;
+	return (ft_strndup(s + start, *i - start));
+}
+
+static void	free_arr(char **arr, int arr_i)
+{
+	while (arr_i--)
+		free(arr[arr_i]);
 	free(arr);
 }
 
-char	**ft_strsplit(char const *s, char c) 
+char	**ft_strsplit(char const *s, char c)
 {
-	char **arr;
-	int n_words;
-	int arr_i;
-	int start;
-	int i;
+	char	**arr;
+	int		arr_i;
+	int		count;
+	int		i;
 
-	n_words = count_words(s, c);
-	arr = (char **)malloc(n_words + 1);
+	if (s == NULL)
+		return (NULL);
+	count = count_words(s, c);
+	arr = (char **)malloc(sizeof(char *) * (count + 1));
 	if (arr == NULL)
 		return (NULL);
-
 	arr_i = 0;
 	i = 0;
-	start = 0;
-	while (arr_i < n_words)
+	while (arr_i < count)
 	{
-		while (s[i])
+		arr[arr_i] = get_word(s, c, &i);
+		if (arr[arr_i] == NULL)
 		{
-			if (s[i] == c) 
-				i++;
-			else 
-			{
-				start = i;
-				while (s[i] != c && s[i]) 
-					i++;
-				arr[arr_i] = ft_strndup(s + start, i - start);
-				if (arr[arr_i] == NULL) 
-				{
-					free_arr(arr, arr_i);
-					return (NULL);
-				}
-				break;
-			}
+			free_arr(arr, arr_i);
+			return (NULL);
 		}
 		arr_i++;
 	}

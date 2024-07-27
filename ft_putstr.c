@@ -2,7 +2,7 @@
 
 void	ft_putstr(char const *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
