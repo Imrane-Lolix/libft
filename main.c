@@ -1,23 +1,15 @@
+#include <unistd.h>
+#include <fcntl.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include "ft_itoa.c"
 
-int main()
-{
-    int inputs[] = {123, -456, 0, 1000, -1000};
-    char *expected_outputs[] = {"123", "-456", "0", "1000", "-1000"};
+int main(int ac, char **av) {
+	int fd = open("test.txt", O_WRONLY | O_TRUNC | O_CREAT, 0640);
 
-    for (int i = 0; i < 5; i++)
-    {
-        char *output = ft_itoa(inputs[i]);
-        printf("Input: %d\n", inputs[i]);
-        printf("Output: %s\n", output);
-        printf("Expected Output: %s\n", expected_outputs[i]);
-        printf("Result: %s\n", strcmp(output, expected_outputs[i]) == 0 ? "PASS" : "FAIL");
-        printf("\n");
-        free(output);
-    }
+	if (fd == -1) return (1);
 
-    return 0;
+	printf("fd = %d\n", fd);
+	write(fd, av[1], strlen(av[1]));
+	close(fd);
+	return 0;
 }

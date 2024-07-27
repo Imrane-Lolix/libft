@@ -1,28 +1,30 @@
 #include "libft.h"
 
-static int count_digits(int n)
+static int count_digits(long int n)
 {
-	if (n < 0) n = -n;
-	if (n == 0 || n < 10) return 1;
+	if (n < 0)
+		n = -n;
+	if (n == 0 || n < 10)
+		return 1;
 	return (1 + count_digits(n / 10));
 }
 
 char *ft_itoa(int n)
 {
 	char *a;
-	int nbr;
+	long int nbr;
 	int len;
 
 	len = count_digits(n);
 	if (n < 0)
 	{
-		nbr = -n;
+		nbr = (long int)n;
+		nbr = -nbr;
 		len++;
 	}
 	else
-		nbr = n;
-	a = (char *)malloc(sizeof(char) * (len + 1));
-	if (a == NULL)
+		nbr = (long int)n;
+	if (!(a = ft_strnew(len)))
 		return (NULL);
 	if (n < 0)
 		a[0] = '-';
